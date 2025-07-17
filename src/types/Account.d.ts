@@ -1,11 +1,11 @@
-export type AccountTypes = 'ldap' | 'local'
-
+export type AccountType = 'ldap' | 'local'
+export type Marker = { text: string }
 // Общие свойства для всех аккаунтов
 type BaseAccount = {
   id: number
-  marker: string[]
+  marker: Marker[]
   login: string
-  type: AccountTypes
+  type: AccountType
 }
 
 // Уточняем тип в зависимости от `type`:
